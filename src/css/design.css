@@ -1,0 +1,120 @@
+html {
+  font-family: "Source Code Pro", "Meiryo UI", "Hiragino Kaku Gothic ProN",
+    sans-serif;
+  font-size: 1em;
+  color: rgb(32, 32, 32);
+  background-color: rgb(233, 222, 198);
+}
+
+body {
+  margin: 0;
+  display: grid;
+  grid-template-rows: 150px 1fr 50px;
+}
+
+a {
+  text-decoration-line: none !important;
+}
+
+/* ヘッダー */
+header {
+  grid-row: 1 / 2;
+  color: rgb(240, 240, 240);
+  background-color: rgb(64, 64, 64);
+  font-family: "Kosugi Maru", "Meiryo UI", "Hiragino Kaku Gothic ProN",
+    sans-serif;
+}
+
+header .title_main,
+header .title {
+  margin: 32px 16px 16px 16px;
+  font-size: 3em;
+}
+
+header .title_main {
+    font-family: "Source Code Pro", "Kosugi Maru", "Meiryo UI", "Hiragino Kaku Gothic ProN",
+      sans-serif;
+}
+
+header .sub_title {
+  margin: 8px 16px 16px 24px;
+}
+
+/* セクション */
+section .content_main {
+  grid-row: 2 / 3;
+}
+
+.post {
+  display: grid;
+}
+
+.post_ul {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-content: space-around;
+  justify-content: space-around;
+}
+
+.post_li:hover {
+  filter: brightness(0.55) drop-shadow(3px 3px 3px #00000080);
+}
+
+.post_li_none {
+  width: 300px;
+  height: 280px;
+  margin: 16px;
+}
+
+.post_li {
+  width: 300px;
+  height: 272px;
+  margin: 32px;
+  filter: drop-shadow(3px 3px 3px #00000080);
+}
+
+.post_img {
+  width: 300px;
+  height: 272px;
+  text-align: center;
+  display: block;
+}
+
+.post_img img {
+  width: 300px;
+  height: 272px;
+}
+
+.post_img img:hover {
+    transform: scale(1.1);
+    transition-duration: 0.25s;
+}
+
+figure {
+  margin: 0;
+}
+
+/* フッター */
+footer {
+  grid-row: 3 / 4;
+  margin: 50px 0 0 0;
+  text-align: center;
+}
+
+/* ================================== */
+/* スマホ用CSS                         */
+/* ================================== */
+@media screen and (max-width: 768px) {
+
+  header .title_main,
+  header .title {
+    margin: 32px 16px 16px 16px;
+    font-size: 1.2em;
+  }
+
+header .sub_title {
+  margin: 8px 16px 16px 24px;
+    font-size: 0.78rem;
+}
+}
