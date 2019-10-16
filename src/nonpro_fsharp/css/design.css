@@ -57,25 +57,18 @@ section .content_main {
   flex-wrap: wrap;
 
   margin: auto;
-  align-content: space-around;
-  justify-content: space-around;
+  justify-content: center;
 }
 
 .post_li:hover {
   filter: brightness(0.55) drop-shadow(3px 3px 3px #00000080);
 }
 
-.post_li_none {
-  width: 250px;
-  height: 250px;
-  margin: 16px;
-}
-
 .post_li {
   width: 250px;
   height: 250px;
   margin: 16px;
-  /* background-color: rgb(240, 240, 240); */
+  padding: 24px;
   filter: drop-shadow(3px 3px 3px #00000080);
 }
 
@@ -83,7 +76,6 @@ section .content_main {
   width: 250px;
   height: 250px;
   text-align: center;
-  /* overflow: hidden; */
   display: block;
 }
 
