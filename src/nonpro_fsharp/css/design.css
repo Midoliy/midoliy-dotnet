@@ -60,6 +60,17 @@ section .content_main {
   justify-content: center;
 }
 
+.post_li_mini:hover {
+  filter: brightness(0.55) drop-shadow(3px 3px 3px #00000080);
+}
+
+.post_li_mini {
+  width: 150px;
+  height: 150px;
+  margin: 18px;
+  filter: drop-shadow(3px 3px 3px #00000080);
+}
+
 .post_li:hover {
   filter: brightness(0.55) drop-shadow(3px 3px 3px #00000080);
 }
@@ -67,10 +78,11 @@ section .content_main {
 .post_li {
   width: 250px;
   height: 250px;
-  margin: 16px;
+  margin: 24px;
   filter: drop-shadow(3px 3px 3px #00000080);
 }
 
+.post_img_mini img:hover,
 .post_img img:hover {
     transform: scale(1.1);
     transition-duration: 0.25s;
