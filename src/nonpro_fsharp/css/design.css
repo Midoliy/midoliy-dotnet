@@ -65,32 +65,11 @@ section .content_main {
   filter: brightness(0.55) drop-shadow(3px 3px 3px #00000080);
 }
 
-.post_li_none {
-  width: 250px;
-  height: 250px;
-  margin: 16px;
-}
-
 .post_li {
   width: 250px;
   height: 250px;
   margin: 16px;
-  /* background-color: rgb(240, 240, 240); */
   filter: drop-shadow(3px 3px 3px #00000080);
-}
-
-.post_img {
-  width: 250px;
-  height: 250px;
-  text-align: center;
-  /* overflow: hidden; */
-  display: block;
-}
-
-.post_img img {
-  width: 250px;
-  height: 250px;
-  text-align: center;
 }
 
 .post_img img:hover {
