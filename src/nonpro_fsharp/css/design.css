@@ -57,8 +57,7 @@ section .content_main {
   flex-wrap: wrap;
 
   margin: auto;
-  align-content: space-around;
-  justify-content: space-around;
+  justify-content: center;
 }
 
 .post_li:hover {
