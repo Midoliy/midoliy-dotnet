@@ -14,18 +14,27 @@ body {
 }
 
 a {
+  color: rgb(32, 32, 32) !important;
+  text-decoration-line: none !important;
+}
+
+a:hover {
+  filter: drop-shadow(0px 0px 6px rgb(0, 183, 255));
   text-decoration-line: none !important;
 }
 
 h1 {
   font-size: 2.0em;
 }
+
 h2 {
   font-size: 1.75em;
 }
+
 h3 {
   font-size: 1.5em;
 }
+
 h4 {
   font-size: 1.25em;
 }
@@ -36,6 +45,14 @@ article {
 
 hr.dashed {
   border-top: 2px dashed #e09304;
+}
+
+.prettyprint,
+.linenums,
+.linenums li {
+  font-family: "Source Code Pro","Kosugi Maru",sans-serif !important;
+  background-color: rgb(48, 48, 48) !important;
+  font-size: 0.95em;
 }
 
 /* ヘッダー */
@@ -54,7 +71,7 @@ header .title {
 }
 
 header .title_main {
-    font-family: "Source Code Pro", "Kosugi Maru", "Meiryo UI", "Hiragino Kaku Gothic ProN",
+    font-family: "Source Code Pro","Kosugi Maru","Meiryo UI", "Hiragino Kaku Gothic ProN",
       sans-serif;
 }
 
@@ -62,18 +79,35 @@ header .sub_title {
   margin: 8px 16px 16px 24px;
 }
 
+/* ボディ */
+body {
+  font-family: "Source Code Pro","Kosugi Maru","Meiryo UI","Hiragino Kaku Gothic ProN",sans-serif;
+  font-size: 1.1em;
+}
+
 /* セクション */
 section .content_main {
   grid-row: 2 / 3;
 }
 
+.articles,
 .post {
   display: grid;
 }
 
+.article_list {
+  display: flex;
+  width: 90%;
+  flex-direction: row;
+  flex-wrap: wrap;
+
+  margin: auto;
+  justify-content: center;
+}
+
 .post_ul {
   display: flex;
-  width: 80%;
+  width: 95%;
   flex-direction: row;
   flex-wrap: wrap;
 
@@ -109,8 +143,21 @@ section .content_main {
   filter: brightness(0.55) drop-shadow(3px 3px 3px #00000080);
 }
 
+.article_li {
+  width: 350px;
+  height: 700px;
+  padding: 0 12px 12px 12px;
+  margin: 12px;
+  line-height: 2.5em;
+  font-weight: bold;
+}
+
+.article_li_title {
+  font-size: 1.5em;
+}
+
 .post_li {
-  width: 250px;
+  width: 260px;
   height: 250px;
   margin: 24px;
   filter: drop-shadow(3px 3px 3px #00000080);
@@ -118,22 +165,18 @@ section .content_main {
 
 .post_img_mini img:hover,
 .post_img img:hover {
-    transform: scale(1.1);
-    transition-duration: 0.25s;
+  transform: scale(1.1);
+  transition-duration: 0.25s;
 }
 
-figure {
-  margin: 0;
-}
-
-figcaption {
-  height: 62px;
-  margin: 4px 0px 4px 8px;
-
-  display: -webkit-flex;
-  display: flex;
-  -webkit-align-items: center;
-  align-items: center;
+.article_li_title::before {
+  content         : '';
+  background      : url("../img/fs_logo.png");
+  width           : 1.1em;
+  height          : 1.1em;
+  background-size : 1.1em 1.1em;
+  display         : inline-block;
+  vertical-align  : text-bottom;
 }
 
 /* フッター */
@@ -157,10 +200,15 @@ footer {
     font-size: 0.72rem;
   }
 
+  body {
+    font-size: 0.80rem;
+  }
+
   .post_btn {
     transform: scale(0.9, 0.9);
   }
 
+  .article_list
   .post_ul {
     width: 100%;
   }
@@ -173,6 +221,16 @@ footer {
 
   .post_li {
     margin: auto;
+  }
+
+  .article_li_title {
+    font-size: 1.5em;
+  }
+
+  .article_li {
+    width: 280px;
+    height: 650px;
+    line-height: 3.5em;
   }
   
 }

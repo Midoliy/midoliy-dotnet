@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta
+      property="og:url"
+      content="https://midoliy.com/content/fsharp/index.html"
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="プログラミングF#" />
+    <meta
+      property="og:description"
+      content="F# (プログラミング言語) の日本語リファレンスサイトです."
+    />
+    <meta property="og:site_name" content="Midoliy |> F#プログラミング" />
+    <meta property="og:image" content="https://midoliy.com/asset/og_img.png" />
+    <meta property="og:image:width" content="256" />
+    <meta property="og:image:height" content="256" />
+    <meta property="og:locale" content="ja_JP" />
+    <meta name="twitter:card" content="summary" />
+
+    <title>プログラミングF#</title>
+    <meta
+      name="description"
+      content="プログラミングF# / 非公式日本語リファレンスサイト"
+    />
+    <link rel="shortcut icon" href="./img/midoliy_fabicon.png" />
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=UA-143164157-1"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+      gtag("config", "UA-143164157-1");
+    </script>
+
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, minimum-scale=1.0"
+    />
+    <meta
+      name="google-site-verification"
+      content="09hfklx0xyk42C60Ah0xvRFySTBGutqeAlcYIgZrI9A"
+    />
+    <meta name="keywords" content="F#,Ｆ＃,えふしゃ－ぷ,リファレンス" />
+
+    <!-- ページCSS -->
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.7.1/css/all.css"
+      integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="./css/design.css" />
+
+    <!-- Font -->
+    <link
+      href="https://fonts.googleapis.com/css?family=Source+Code+Pro&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Kosugi+Maru&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Code syntax highlight -->
+    <!-- <script
+      type="text/javascript"
+      src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js?lang=ml&skin=sunburst"
+    ></script> -->
+    <script
+      type="text/javascript"
+      src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js?lang=ml&skin=sons-of-obsidian"
+    ></script>
+  </head>
+
+  <body>
+    <header>
+      <div class="title">プログラミング F#</div>
+      <div class="sub_title">～ 非公式 日本語リファレンス ～</div>
+    </header>
+
+    <section class="content_main">
+      <!-- <div>
+        <pre class="prettyprint linenums lang-ml">
+let a' = 100
+let f = fun x -> x*x</pre>
+      </div> -->
+
+      <div class="articles">
+        <div class="article_list">
+          <div class="article_li">
+            <h1 class="article_li_title"> 基礎</h1>
+            <ul>
+              <li><a href="index.html">はじめに</a></li>
+              <li><a href="index.html">値 : <strong>let束縛</strong></a></li>
+              <li><a href="index.html">値 : <strong>mutable</strong></a></li>
+              <li><a href="index.html">式 と 文</a></li>
+              <li><a href="index.html">名前空間 : <strong>namespace</strong></a></li>
+              <li><a href="index.html">モジュール : <strong>module</strong></a></li>
+            </ul>
+          </div>
+
+          <div class="article_li">
+            <h1 class="article_li_title"> F# プリミティブ型</h1>
+            <ul>
+              <li><a href="index.html">F#のプリミティブ型一覧</a></li>
+              <li><a href="index.html"><strong>真偽型</strong></a></li>
+              <li><a href="index.html"><strong>整数型</strong></a></li>
+              <li><a href="index.html"><strong>浮動小数点数型</strong></a></li>
+              <li><a href="index.html"><strong>進数浮動小数点数型</strong></a></li>
+              <li><a href="index.html"><strong>文字型</strong></a></li>
+              <li><a href="index.html"><strong>文字列型</strong></a></li>
+              <li><a href="index.html"><strong>unit型</strong></a></li>
+            </ul>
+          </div>
+
+          <div class="article_li">
+            <h1 class="article_li_title"> F# オプトイン型</h1>
+            <ul>
+              <li><a href="index.html"><strong>tuple 型</strong></a></li>
+              <li><a href="index.html"><strong>option 型</strong></a></li>
+              <li><a href="index.html"><strong>result 型</strong></a></li>
+              <li><a href="index.html"><strong>list&lt;'T&gt; 型</strong></a></li>
+              <li><a href="index.html"><strong>array&lt;'T&gt; 型</strong></a></li>
+              <li><a href="index.html"><strong>seq&lt;'T&gt; 型</strong></a></li>
+              <li><a href="index.html"><strong>map&lt;'TKey, 'TValue&gt; 型</strong></a></li>
+              <li><a href="index.html"><strong>set&lt;'T&gt; 型</strong></a></li>
+            </ul>
+          </div>
+
+          <div class="article_li">
+            <h1 class="article_li_title"> 型 (その他)</h1>
+            <ul>
+              <li><a href="index.html"><strong>型推論</strong></a></li>
+              <li><a href="index.html">型変換 : <strong>明示的型変換</strong></a></li>
+              <li><a href="index.html">型変換 : <strong>Convertモジュール</strong></a></li>
+              <li><a href="index.html">型変換 : <strong>Parseメソッド</strong></a></li>
+              <li><a href="index.html">型変換 : <strong>TryParseメソッド</strong></a></li>
+              <li><a href="index.html"><strong>型略称</strong></a></li>
+            </ul>
+          </div>
+
+          <div class="article_li">
+            <h1 class="article_li_title"> 型の自作</h1>
+            <ul>
+              <li><a href="index.html"><strong>レコード型</strong></a></li>
+              <li><a href="index.html"><strong>匿名レコード型</strong></a></li>
+              <li><a href="index.html"><strong>判別共用体</strong></a></li>
+              <li><a href="index.html"><strong>列挙体</strong></a></li>
+              <li><a href="index.html"><strong>クラス</strong></a></li>
+              <li><a href="index.html"><strong>構造体</strong></a></li>
+              <li><a href="index.html"><strong>インターフェース</strong></a></li>
+              <li><a href="index.html"><strong>抽象クラス</strong></a></li>
+              <li><a href="index.html"><strong>型拡張</strong></a></li>
+            </ul>
+          </div>
+
+          <div class="article_li">
+            <h1 class="article_li_title"> 演算子</h1>
+            <ul>
+              <li><a href="index.html"><strong>算術演算子</strong></a></li>
+              <li><a href="index.html"><strong>論理演算子</strong></a></li>
+              <li><a href="index.html"><strong>ビット処理演算子</strong></a></li>
+              <li><a href="index.html"><strong>null許容演算子</strong></a></li>
+              <li><a href="index.html"><strong>パイプライン</strong></a></li>
+              <li><a href="index.html"><strong>関数合成</strong></a></li>
+            </ul>
+          </div>
+
+          <div class="article_li">
+            <h1 class="article_li_title"> 関数</h1>
+            <ul>
+              <li><a href="index.html"><strong>関数の基本</strong></a></li>
+              <li><a href="index.html"><strong>パラメータ</strong>と<strong>引数</strong></a></li>
+              <li><a href="index.html"><strong>高階関数</strong></a></li>
+              <li><a href="index.html"><strong>カリー化</strong></a></li>
+              <li><a href="index.html"><strong>再帰関数</strong></a></li>
+              <li><a href="index.html"><strong>ラムダ式</strong> (無名関数)</a></li>
+            </ul>
+          </div>
+
+          <div class="article_li">
+            <h1 class="article_li_title"> パターンマッチ</h1>
+            <ul>
+              <li><a href="index.html"><strong>match 式</strong></a></li>
+              <li><a href="index.html"><strong>function 式</strong></a></li>
+              <li><a href="index.html"><strong>定数パターン</strong></a></li>
+              <li><a href="index.html"><strong>識別子パターン</strong></a></li>
+              <li><a href="index.html"><strong>変数パターン</strong></a></li>
+              <li><a href="index.html"><strong>ワイルドカードパターン</strong></a></li>
+              <li><a href="index.html"><strong>AND / OR パターン</strong></a></li>
+              <li><a href="index.html"><strong>as パターン</strong></a></li>
+              <li><a href="index.html"><strong>cons パターン</strong></a></li>
+              <li><a href="index.html"><strong>リスト / 配列パターン</strong></a></li>
+              <li><a href="index.html"><strong>タプルパターン</strong></a></li>
+              <li><a href="index.html"><strong>レコードパターン</strong></a></li>
+              <li><a href="index.html"><strong>型テストパターン</strong></a></li>
+              <li><a href="index.html"><strong>アクティブパターン</strong></a></li>
+            </ul>
+          </div>
+
+          <div class="article_li">
+            <h1 class="article_li_title"> 制御構文</h1>
+            <ul>
+              <li><a href="index.html">条件分岐 : <strong>if 式</strong></a></li>
+              <li><a href="index.html">繰り返し : <strong>for...in 式</strong></a></li>
+              <li><a href="index.html">繰り返し : <strong>for...to 式</strong></a></li>
+              <li><a href="index.html">繰り返し : <strong>while...do 式</strong></a></li>
+            </ul>
+          </div>
+
+          <div class="article_li">
+            <h1 class="article_li_title"> クラス</h1>
+            <ul>
+              <li><a href="index.html"><strong>クラス宣言</strong></a></li>
+              <li><a href="index.html"><strong>コンストラクタ</strong></a></li>
+              <li><a href="index.html"><strong>プロパティ</strong></a></li>
+              <li><a href="index.html"><strong>val キーワード</strong></a></li>
+              <li><a href="index.html"><strong>ジェネリッククラス</strong></a></li>
+              <li><a href="index.html"><strong>インターフェースの実装</strong></a></li>
+              <li><a href="index.html"><strong>抽象クラスの継承</strong></a></li>
+              <li><a href="index.html"><strong>オーバーロード</strong></a></li>
+              <li><a href="index.html"><strong>キャスト</strong></a></li>
+              <li><a href="index.html"><strong>フレキシブル型</strong></a></li>
+              <li><a href="index.html"><strong>オブジェクト式</strong></a></li>
+            </ul>
+          </div>
+
+          <div class="article_li">
+            <h1 class="article_li_title"> ジェネリック</h1>
+            <ul>
+              <li><a href="index.html"><strong>ジェネリックの基本</strong></a></li>
+              <li><a href="index.html"><strong>コンストラクタ制約</strong></a></li>
+              <li><a href="index.html"><strong>null 制約</strong></a></li>
+              <li><a href="index.html"><strong>値型制約 / 参照型制約</strong></a></li>
+              <li><a href="index.html"><strong>列挙型制約</strong></a></li>
+            </ul>
+          </div>
+
+          <div class="article_li">
+            <h1 class="article_li_title"> 型プロバイダ</h1>
+            <ul>
+              <li><a href="index.html"><strong>型プロバイダとは</strong></a></li>
+              <li><a href="index.html"><strong>JSON 型プロバイダ</strong></a></li>
+              <li><a href="index.html"><strong>CSV 型プロバイダ</strong></a></li>
+              <li><a href="index.html"><strong>EXCEL 型プロバイダ</strong></a></li>
+              <li><a href="index.html"><strong>SQL 型プロバイダ</strong></a></li>
+              <li><a href="index.html"><strong>SQLite 型プロバイダ</strong></a></li>
+            </ul>
+          </div>
+
+          <div class="article_li">
+            <h1 class="article_li_title"> コンピュテーション式</h1>
+            <ul>
+              <li><a href="index.html"><strong>コンピュテーション式とは</strong></a></li>
+              <li><a href="index.html">値の列挙 : <strong>seq 式</strong></a></li>
+              <li><a href="index.html">非同期処理 : <strong>async 式</strong></a></li>
+              <li><a href="index.html">LINQ : <strong>query 式</strong></a></li>
+              <li><a href="index.html"><strong>自作コンピュテーション式</strong></a></li>
+            </ul>
+          </div>
+
+          <div class="article_li">
+            <h1 class="article_li_title"> F# のさまざまな機能</h1>
+            <ul>
+              <li><a href="index.html">リソースの管理 : <strong>use</strong></a></li>
+              <li><a href="index.html">遅延評価 : <strong>lazy</strong></a></li>
+              <li><a href="index.html"><strong>測定単位</strong></a></li>
+              <li><a href="index.html"><strong>コードクォート</strong></a></li>
+              <li><a href="index.html"><strong>fixed キーワード</strong></a></li>
+              <li><a href="index.html"><strong>参照セル</strong></a></li>
+              <li><a href="index.html"><strong>byref / inref / outref</strong></a></li>
+            </ul>
+          </div>
+
+          <div class="article_li">
+            <h1 class="article_li_title"> 例外処理</h1>
+            <ul>
+              <li><a href="index.html"><strong>例外処理の概要</strong></a></li>
+              <li><a href="index.html"><strong>try...with 式</strong></a></li>
+              <li><a href="index.html"><strong>try...finally 式</strong></a></li>
+              <li><a href="index.html"><strong>failwith 関数</strong></a></li>
+              <li><a href="index.html"><strong>invalidArg 関数</strong></a></li>
+              <li><a href="index.html"><strong>exception 構文</strong></a></li>
+              <li><a href="index.html"><strong>System.Exception 継承</strong></a></li>
+            </ul>
+          </div>
+
+          <div class="article_li">
+            <h1 class="article_li_title"> テスト</h1>
+            <ul>
+              <li><a href="index.html"><strong>assert 式</strong></a></li>
+              <li><a href="index.html">xUnit : <strong>Fact 属性</strong></a></li>
+              <li><a href="index.html">xUnit : <strong>Theory 属性</strong></a></li>
+            </ul>
+          </div>
+
+          <div class="article_li">
+            <h1 class="article_li_title"> FSharp.Core</h1>
+            <ul>
+              <li><a href="index.html"><strong>List モジュール</strong></a></li>
+              <li><a href="index.html"><strong>Array モジュール</strong></a></li>
+              <li><a href="index.html"><strong>Seq モジュール</strong></a></li>
+              <li><a href="index.html"><strong>Option モジュール</strong></a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer>更新日: 2019/10/14</footer>
+  </body>
+</html>
