@@ -24,11 +24,11 @@ a:hover {
 }
 
 h1 {
-  font-size: 2.0em;
+  font-size: 1.9em;
 }
 
 h2 {
-  font-size: 1.75em;
+  font-size: 1.7em;
 }
 
 h3 {
@@ -82,7 +82,7 @@ header .sub_title {
 /* ボディ */
 body {
   font-family: "Source Code Pro","Kosugi Maru","Meiryo UI","Hiragino Kaku Gothic ProN",sans-serif;
-  font-size: 1.1em;
+  font-size: 1.0em;
 }
 
 /* セクション */
@@ -106,11 +106,15 @@ article {
   background-color: rgb(48, 48, 48);
 
   width: 100%;
-  line-height: 1.7;
+  line-height: 1.6;
 }
 
 .code pre {
   margin: 0px !important;
+}
+
+.com {
+  color: rgb(109, 119, 126) !important;
 }
 
 .chapter {
@@ -132,8 +136,8 @@ article {
 
 .keyword {
   font-weight: bold;
-  color: #006cc4;
-  filter: drop-shadow(2px 2px 1px rgba(0, 183, 255, 0.8));
+  color: #0074d3;
+  /* filter: drop-shadow(1px 1px 1px rgba(0, 183, 255, 0.8)); */
   /* color: #b46600; */
 }
 
@@ -142,6 +146,11 @@ footer {
   grid-row: 3 / 4;
   margin: 50px 0 0 0;
   text-align: center;
+}
+
+/* イメージ */
+img {
+  filter: drop-shadow(3px 3px 3px rgb(109, 119, 126));
 }
 
 /* ================================== */

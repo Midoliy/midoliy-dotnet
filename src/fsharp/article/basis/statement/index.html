@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta
+      property="og:url"
+      content="https://midoliy.com/content/fsharp/index.html"
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="式と文" />
+    <meta
+      property="og:description"
+      content="F# (プログラミング言語) の日本語リファレンスサイトです."
+    />
+    <meta property="og:site_name" content="Midoliy |> F#プログラミング" />
+    <meta property="og:image" content="https://midoliy.com/asset/og_img.png" />
+    <meta property="og:image:width" content="256" />
+    <meta property="og:image:height" content="256" />
+    <meta property="og:locale" content="ja_JP" />
+    <meta name="twitter:card" content="summary" />
+
+    <title>式と文</title>
+    <meta
+      name="description"
+      content="プログラミングF# / 非公式日本語リファレンスサイト"
+    />
+    <link rel="shortcut icon" href="../../../img/midoliy_fabicon.png" />
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=UA-143164157-1"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+      gtag("config", "UA-143164157-1");
+    </script>
+
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, minimum-scale=1.0"
+    />
+    <meta
+      name="google-site-verification"
+      content="09hfklx0xyk42C60Ah0xvRFySTBGutqeAlcYIgZrI9A"
+    />
+    <meta name="keywords" content="F#,Ｆ＃,えふしゃ－ぷ,リファレンス,式,文,statement,expression" />
+
+    <!-- ページCSS -->
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.7.1/css/all.css"
+      integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="../../../css/article.css" />
+
+    <!-- Font -->
+    <link
+      href="https://fonts.googleapis.com/css?family=Source+Code+Pro&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Kosugi+Maru&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Code syntax highlight -->
+    <script
+      type="text/javascript"
+      src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js?lang=ml&skin=sons-of-obsidian"
+    ></script>
+  </head>
+
+  <body>
+    <header>
+      <div class="title">式と文</div>
+      <div class="sub_title">～ 非公式 日本語リファレンス ～</div>
+    </header>
+
+    <section class="content_main">
+      <div class="post">
+
+        <h1 class="chapter"> 式</h1>
+        <article>
+          プログラミングにおける <strong class="keyword">式</strong> (= <strong>expression</strong>) とは、<b>"なんらかの[評価した値]を返すもの"</b> のことを指します。<br>
+          また、<b>"評価"</b> とは、関数などの式や不等式・if式などの各種計算式を <b>"実際に計算すること"</b> を指します。<br>
+          <br>
+
+          <strong>式</strong>は評価をすることで値になるわけなので、当然、値を書き込めるところには<strong>式</strong>も書き込むことができます。<br>
+          例えば <strong>F#</strong> では <b class="keyword">if</b> は<strong>式</strong>であるため、次のように記述することが可能です。<br>
+
+          <div class="code"><pre class="prettyprint linenums lang-ml">
+let condition = true
+let value = if condition then 100 else 500</pre></div>
+
+          また、<b>不等式</b> は評価されると <b>bool型</b> の値となることはよく知られています。<br>
+          <div class="code"><pre class="prettyprint linenums lang-ml">
+let result = 100 &lt; 200   // true</pre></div>
+          <br>
+          
+          このように <b>100</b> や <b>"Sample"</b> などの <b>値</b> を書き込めるところであればどこにでも <strong>式</strong> を書き込むことができます。<br>
+          これが次節の <strong>文</strong> と大きく異なる点ですので、違いをしっかりと把握しておきましょう。<br>
+
+          <br>
+        </article>
+
+        <br>
+        <h1 class="chapter"> 文</h1>
+        <article>
+          <strong>式</strong> とは異なり、評価されても値を返さないものを <strong class="keyword">文</strong> (= <strong>statement</strong>) と言います。<br>
+          <strong>文</strong> は通常、1つ以上の <strong>式</strong> で構成されます。<br>
+          <br>
+
+          <strong>F#</strong> では、トップレベルでの宣言のみが <strong>文</strong> で、他はすべて <strong>式</strong> となっています。<br>
+          C# や VB.NET では <b>if</b> や <b>for / foreach</b> などの各種制御文がありますが、それらは文字どおり <strong>文</strong> です。<br>
+          <strong>F#</strong> にも同等の機能が存在していますが、こちらはすべて <strong>式</strong> となっています。<br>
+          <br>
+
+          <strong>F#</strong> で <strong>文</strong> となるものとしては <b class="keyword">open宣言</b> や <b class="keyword">namespace宣言</b>、<b class="keyword">module宣言</b>、<b class="keyword">type宣言</b> などがあります。<br>
+
+          <br>
+        </article>
+
+        <br>
+    </section>
+
+    <footer>更新日: 2019/10/14</footer>
+  </body>
+</html>
