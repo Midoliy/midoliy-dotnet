@@ -91,11 +91,11 @@
         <h1 class="chapter"> 値の束縛</h1>
         <article>
 
-          <strong>束縛</strong> または <strong>バインド</strong> とは、<b>値</b> と <b>名称</b> を関連付けることを指します。また、この関連付けのことを <strong>バインディング</strong> と呼ぶこともあります。<br>
+          <strong>束縛</strong>または<strong>バインド</strong>とは、<b>値</b>と<b>名称</b>を関連付けることを指します。また、この関連付けのことを<strong>バインディング</strong>と呼ぶこともあります。<br>
           <br>
 
-          <strong>F#</strong> では <strong>値の束縛</strong> をする際には <spna class="keyword">let</spna> というキーワードを使用します。この <strong>束縛</strong> を特に <strong>let束縛</strong> と呼びます。<br>
-          <strong>F#</strong> の <strong>let束縛</strong> は以下のようにすることで、<b>値</b> と <b>名称</b> を関連づけることが可能です。<br>
+          <strong>F#</strong>では<strong>値の束縛</strong>をする際には <spna class="keyword">let</spna> というキーワードを使用します。この<strong>束縛</strong>を特に <strong>let束縛</strong>と呼びます。<br>
+          <strong>F#</strong>の<strong>let束縛</strong>は以下のようにすることで、<b>値</b>と<b>名称</b>を関連づけることが可能です。<br>
 
           <div class="code"><pre class="prettyprint linenums lang-ml">
 (*** 構文 ***)
@@ -111,11 +111,11 @@ let name = "midoliy"
 // 「x を 2 乗」する 関数値 を f という名称で束縛
 let f x = x**2.</pre></div>
 
-          通常 <b>値</b> の <b>"型"</b> は <b>右辺から自動的に推論される</b> ため、ほとんどの場合で記述の必要がありません。<br>
-          整数型 や 浮動小数点数型 などの <strong>F#</strong><b>組み込み型</b> については、<b>"型リテラル"</b> から推論されます。<br>
+          通常、<b>値</b>の<b>"型"</b>は<b>右辺から自動的に推論される</b>ため、ほとんどの場合で記述の必要がありません。<br>
+          整数型や浮動小数点数型などの<strong>F#</strong><b>組み込み型</b> については、<b>"型リテラル"</b> から推論されます。<br>
           <br>
 
-          明示的に型を指定したい場合、以下のように <b>: (コロン)</b> を利用して指定することが可能です。<br>
+          明示的に型を指定したい場合、以下のように<b> : (コロン)</b>を利用して指定することが可能です。<br>
           <div class="code"><pre class="prettyprint linenums lang-ml">
 // int型の 値 を age と言う名称で束縛
 let age : int = 30
@@ -126,29 +126,29 @@ let name : string = "midoliy"
 // 「x を 2 乗」する 関数値 を f という名称で束縛
 let f (x : float) : float = x**2.</pre></div>
             
-          <strong>let束縛</strong> された値は基本的に <b>不変な値</b> (= 変更不可能な値) となっています。この <b>不変</b> な性質のことを <strong class="keyword">immutable</strong> というので覚えておきましょう。<br>
+          <strong>let束縛</strong>された値は基本的に<b>不変な値</b>(= 変更不可能な値)となっています。この<b>不変</b>な性質のことを<strong class="keyword">immutable</strong>というので覚えておきましょう。<br>
           <br>
         </article>
 
         <br>
         <h1 class="chapter"> immutableな値</h1>
         <article>
-          <strong class="keyword">immutable</strong> な値は、プログラムの実行過程全体を通して変更ができません。<br>
-          C# や VB.NET などの関数型言語以外の言語に慣れ親しんでいる場合、変更可能な値(= <b>mutable</b>な値) ではなく <strong class="keyword">immutable</strong> な値を利用することに違和感を覚えるかもしれません。しかし <b>"値は基本的に変更されない"</b> という大前提が関数型プログラミングにおいては非常に重要な要素となります。<br>
+          <strong class="keyword">immutable</strong>な値は、プログラムの実行過程全体を通して変更ができません。<br>
+          C#やVB.NETなどの関数型言語以外の言語に慣れ親しんでいる場合、変更可能な値(= <b>mutable</b>な値)ではなく<strong class="keyword">immutable</strong>な値を利用することに違和感を覚えるかもしれません。しかし、<b>"値は基本的に変更されない"</b>という大前提が関数型プログラミングにおいては非常に重要な要素となります。<br>
           <br>
           
-          マルチスレッド環境においては、多数の異なるスレッドから変更される <b>"共有変数"</b> を管理することは非常に困難です。そして、その管理するための処理が <b>ボトルネック</b> になりかねません。<br>
-          また、変数が別の関数に渡された際に <b>"変更される可能性があるか？"</b> を見分けることが難しい場合が少なくありません。<br>
-          こういった問題に対して "<strong>immutable</strong><b>な値</b>" が既定であることが優位に働きます (詳細は「マルチスレッド」のページにて紹介)。<br>
+          マルチスレッド環境においては、多数の異なるスレッドから変更される<b>"共有変数"</b>を管理することは非常に困難です。そして、その管理するための処理が<b>ボトルネック</b>になりかねません。<br>
+          また、変数が別の関数に渡された際に<b>"変更される可能性があるか？"</b>を見分けることが難しい場合が少なくありません。<br>
+          こういった問題に対して <strong>"immutable</strong><b>な値"</b> が既定であることが優位に働きます (詳細は「マルチスレッド」のページにて紹介)。<br>
           <br>
 
-          特に純粋な関数型言語では <b>変数は存在せず</b>、関数は <b>数学関数</b> として厳密に機能します。<br>
-          手続き型言語では <b>代入</b> などの <b>変数割り当て</b> を使用して値を <b>変更・更新</b> していきプログラムを構成していきます。<br>
+          特に純粋な関数型言語では<b>変数は存在せず</b>、関数は <b>数学関数</b>として厳密に機能します。<br>
+          手続き型言語では<b>代入</b>などの<b>変数割り当て</b>を使用して値を<b>変更・更新</b>していきプログラムを構成していきます。<br>
           対して、純粋な関数型言語の場合には <b>(1) <strong>immutable</strong>な入力値</b>／<b>(2) <strong>immutable</strong>な関数</b>／<b>(3) <strong>immutable</strong>な出力値</b> で構成していきます。この数学的な厳密性によって、強力な型推論が実現可能となっています。この強力な型推論により、コンパイラでコードをより厳密にチェックし、より効率的な最適化が行われ、開発者が正しいコードを容易に理解・記述できるようになります。<br>
           このような仕組みのおかげで、純粋な関数型言語でのプログラミングにおいては、通常の手続き型言語によるプログラミングよりもデバッグが容易になることが多いです。<br>
           <br>
 
-          <strong>F#</strong> は純粋な関数型言語ではありませんが、関数型プログラミングを完全にサポートしています。<br>
+          <strong>F#</strong>は純粋な関数型言語ではありませんが、関数型プログラミングを完全にサポートしています。<br>
           <strong>immutable</strong>な値を使用することは、コーディングにおいて関数型プログラミングの重要な特長を利用するための優れた手段というわけです。<br>
           <br>
         </article>
@@ -156,8 +156,8 @@ let f (x : float) : float = x**2.</pre></div>
         <br>
         <h1 class="chapter"> 変更可能な値</h1>
         <article>
-          <strong>F#</strong> は純粋な関数型言語ではないため、<b>変更可能な値</b> (= <strong class="keyword">mutable</strong>な値) を利用することも可能です。<br>
-          その場合、<strong>let束縛</strong> に <strong class="keyword">mutable</strong> キーワードを使用します。<br>
+          <strong>F#</strong>は純粋な関数型言語ではないため、<b>変更可能な値</b>(= <strong class="keyword">mutable</strong>な値)を利用することも可能です。<br>
+          その場合、<strong>let束縛</strong>に<strong class="keyword">mutable</strong>キーワードを使用します。<br>
 
           <div class="code"><pre class="prettyprint linenums lang-ml">
 (*** 構文 ***)
@@ -170,27 +170,27 @@ let mutable age = 30
 // string型の 値 を name と言う名称で束縛
 let mutable name = "midoliy"</pre></div>
 
-          <strong>F#</strong> で<strong>mutable</strong>な値を利用できる範囲は、通常 <b>"型のフィールド"</b> または <b>"ローカル値"</b> のみに限定されています。<br>
+          <strong>F#</strong>で<strong>mutable</strong>な値を利用できる範囲は、通常、<b>"型のフィールド"</b> または <b>"ローカル値"</b> のみに限定されています。<br>
           これは<strong>mutable</strong>な値を利用できる範囲を限定することによって制御を容易にし、誤った方法で値が変更される可能性を極力低くするためにそうなっています。<br>
           <br>
 
-          <strong>mutable</strong> を付けて宣言した値は変更可能であるため、<strong class="keyword">&lt;- 演算子</strong> を使用して値の再割り当てをすることができます。<br>
+          <strong>mutable</strong>を付けて宣言した値は変更可能であるため、<strong class="keyword">&lt;- 演算子</strong> を使用して値の再割り当てをすることができます。<br>
           
           <div class="code"><pre class="prettyprint linenums lang-ml">
 // int型の 値 を age と言う名称で束縛
 let mutable age = 30
 // age に 35 を再割り当て
-age <- 30
+age &lt;- 35
 
 // string型の 値 を name と言う名称で束縛
 let mutable name = "midoliy"
 // name に "MIDOLIY" を再割り当て
-name <- "MIDOLIY"</pre></div>
+name &lt;- "MIDOLIY"</pre></div>
 
           <br>
         </article>
     </section>
 
-    <footer>更新日: 2019/10/14</footer>
+    <footer>投稿日: 2019/10/14, 更新日: 2020/05/13</footer>
   </body>
 </html>

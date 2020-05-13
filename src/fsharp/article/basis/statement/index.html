@@ -90,24 +90,24 @@
 
         <h1 class="chapter"> 式</h1>
         <article>
-          プログラミングにおける <strong class="keyword">式</strong> (= <strong>expression</strong>) とは、<b>"なんらかの[評価した値]を返すもの"</b> のことを指します。<br>
+          プログラミングにおける <strong class="keyword">式</strong>(= <strong>expression</strong>) とは、<b>"なんらかの[評価した値]を返すもの"</b> のことを指します。<br>
           また、<b>"評価"</b> とは、関数などの式や不等式・if式などの各種計算式を <b>"実際に計算すること"</b> を指します。<br>
           <br>
 
           <strong>式</strong>は評価をすることで値になるわけなので、当然、値を書き込めるところには<strong>式</strong>も書き込むことができます。<br>
-          例えば <strong>F#</strong> では <b class="keyword">if</b> は<strong>式</strong>であるため、次のように記述することが可能です。<br>
+          例えば<strong>F#</strong>では <b class="keyword">if</b> は<strong>式</strong>であるため、次のように記述することが可能です。<br>
 
           <div class="code"><pre class="prettyprint linenums lang-ml">
 let condition = true
 let value = if condition then 100 else 500</pre></div>
 
-          また、<b>不等式</b> は評価されると <b>bool型</b> の値となることはよく知られています。<br>
+          また、<b>不等式</b>は評価されると<b>bool型</b>の値となることはよく知られています。<br>
           <div class="code"><pre class="prettyprint linenums lang-ml">
 let result = 100 &lt; 200   // true</pre></div>
           <br>
           
-          このように <b>100</b> や <b>"Sample"</b> などの <b>値</b> を書き込めるところであればどこにでも <strong>式</strong> を書き込むことができます。<br>
-          これが次節の <strong>文</strong> と大きく異なる点ですので、違いをしっかりと把握しておきましょう。<br>
+          このように<b>100</b>や<b>"Sample"</b>などの<b>値</b>を書き込めるところであればどこにでも<strong>式</strong>を書き込むことができます。<br>
+          これが次節の<strong>文</strong>と大きく異なる点ですので、違いをしっかりと把握しておきましょう。<br>
 
           <br>
         </article>
@@ -115,16 +115,16 @@ let result = 100 &lt; 200   // true</pre></div>
         <br>
         <h1 class="chapter"> 文</h1>
         <article>
-          <strong>式</strong> とは異なり、評価されても値を返さないものを <strong class="keyword">文</strong> (= <strong>statement</strong>) と言います。<br>
-          <strong>文</strong> は通常、1つ以上の <strong>式</strong> で構成されます。<br>
+          <strong>式</strong>とは異なり、評価されても値を返さないものを <strong class="keyword">文</strong>(= <strong>statement</strong>) と言います。<br>
+          <strong>文</strong>は通常、1つ以上の<strong>式</strong>で構成されます。<br>
           <br>
 
-          <strong>F#</strong> では、トップレベルでの宣言のみが <strong>文</strong> で、他はすべて <strong>式</strong> となっています。<br>
-          C# や VB.NET では <b>if</b> や <b>for / foreach</b> などの各種制御文がありますが、それらは文字どおり <strong>文</strong> です。<br>
-          <strong>F#</strong> にも同等の機能が存在していますが、こちらはすべて <strong>式</strong> となっています。<br>
+          <strong>F#</strong>では、トップレベルでの宣言のみが<strong>文</strong>で、他はすべて<strong>式</strong>となっています。<br>
+          C#やVB.NETでは、<b>if</b>や<b>for / foreach</b>などの各種制御文がありますが、それらは文字どおり<strong>文</strong>です。<br>
+          <strong>F#</strong>にも同等の機能が存在していますが、こちらはすべて<strong>式</strong>となっています。<br>
           <br>
 
-          <strong>F#</strong> で <strong>文</strong> となるものとしては <b class="keyword">open宣言</b> や <b class="keyword">namespace宣言</b>、<b class="keyword">module宣言</b>、<b class="keyword">type宣言</b> などがあります。<br>
+          <strong>F#</strong>で<strong>文</strong>となるものとしては<b class="keyword">open宣言</b>や<b class="keyword">namespace宣言</b>、<b class="keyword">module宣言</b>、<b class="keyword">type宣言</b>などがあります。<br>
 
           <br>
         </article>
@@ -132,6 +132,6 @@ let result = 100 &lt; 200   // true</pre></div>
         <br>
     </section>
 
-    <footer>更新日: 2019/10/14</footer>
+    <footer>投稿日: 2019/10/14, 更新日: 2020/05/13</footer>
   </body>
 </html>

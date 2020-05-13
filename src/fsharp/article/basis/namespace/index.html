@@ -94,7 +94,7 @@
           そういったときに、<strong>名前空間</strong>(= <strong class="keyword">namespace</strong>) が役に立ちます。<br>
           <br>
 
-          基本的に <strong>名前空間</strong> もフォルダ管理と同じように入れ子で管理することが多いです。<br>
+          基本的に<strong>名前空間</strong>もフォルダ管理と同じように入れ子で管理することが多いです。<br>
           例えば、以下のようなフォルダ構成を考えてみます。<br>
           <br>
 
@@ -106,20 +106,20 @@
           プログラムにおいては、このフォルダの部分が <strong>名前空間</strong> の部分にあたります。<br>
           <br>
 
-          これと同じ考え方で、プログラムを作成する場合にも関連する項目ごとに <strong>名前空間</strong> を作成します。<br>
-          FSharp.Core の <strong>名前空間</strong> を参考に見てみましょう。<br>
+          これと同じ考え方で、プログラムを作成する場合にも関連する項目ごとに<strong>名前空間</strong>を作成します。<br>
+          FSharp.Coreの<strong>名前空間</strong>を参考に見てみましょう。<br>
           <br>
 
-          <img src="./img/namespace.png"/><br>
+          <img src="./img/namespace.png" class="mobile-resize-95" /><br>
           <br>
 
-          上記の図は、Fsharp.Core の <strong>名前空間</strong> をフォルダ構成に似せたものとなります。<br>
-          これを見ると、Arrayモジュール や Listモジュール などのコレクションに関連するものは <strong>Microsoft.FSharp.Collections</strong> の中に定義されていることがわかります。<br>
-          また、Optionモジュール や Printfモジュール、Stringモジュール などの中核を成す機能については <strong>Microsoft.FSharp.Core</strong> の中に定義されていることがわかります。<br>
+          上記の図は、Fsharp.Coreの<strong>名前空間</strong>をフォルダ構成に似せたものとなります。<br>
+          これを見ると、<strong>ArrayモジュールやListモジュール</strong>などのコレクションに関連するものは<strong>Microsoft.FSharp.Collections</strong>の中に定義されていることがわかります。<br>
+          また、<strong>OptionモジュールやPrintfモジュール、Stringモジュール</strong>などの中核を成す機能については<strong>Microsoft.FSharp.Core</strong>の中に定義されていることがわかります。<br>
           <br>
 
-          このように関連する項目ごとにグルーピングするための機能が <strong>名前空間</strong> なわけです。<br>
-          また、フォルダ管理をする際にはフォルダ階層を「プロジェクト/ドキュメント」のようにスラッシュやバックスラッシュで区切りますが、<strong>名前空間</strong> では「Microsoft.FSharp.Collections」のように <strong>ドット</strong> で区切ります。<br>
+          このように関連する項目ごとにグルーピングするための機能が<strong>名前空間</strong>なわけです。<br>
+          また、フォルダ管理をする際にはフォルダ階層を「プロジェクト/ドキュメント」のようにスラッシュやバックスラッシュで区切りますが、<strong>名前空間</strong>では「Microsoft.FSharp.Collections」のように <strong>ドット</strong> で区切ります。<br>
           <br>
 
           <br>
@@ -128,14 +128,18 @@
         <br>
         <h1 class="chapter"> 名前空間の使い方</h1>
         <article>
-          <strong>名前空間</strong> を利用するには <strong class="keyword">namespace</strong> というキーワードを利用します。<br>
-          また、<strong>名前空間</strong> は <strong>ファイルの最上位要素</strong> として宣言しなければなりません。<br>
+          <strong>名前空間</strong>を利用するには <strong class="keyword">namespace</strong> というキーワードを利用します。<br>
+          また、<strong>名前空間</strong>は<strong>ファイルの最上位要素</strong>として宣言しなければなりません。<br>
           <br>
 
-          つまり <strong class="keyword">namespace</strong> を使う前に <strong class="keyword">module</strong> や <strong class="keyword">type</strong> などを宣言することができないというわけです。<br>
+          つまり、<strong class="keyword">namespace</strong>を使う前に<strong class="keyword">module</strong>や<strong class="keyword">type</strong>などを宣言することができないというわけです。<br>
           それでは今回も FSharp.Core の名前空間をサンプルに、コードを見ていきましょう。<br>
 
           
+          <div class="code"><pre class="prettyprint linenums lang-ml">
+(*** 構文 ***)
+namespace 名前空間名</pre></div>
+
           <div class="code"><pre class="prettyprint linenums lang-ml">
 namespace Microsoft
 namespace FSharp
@@ -147,8 +151,8 @@ module Sample =
         printfn "Hello world!!"
         0</pre></div>
 
-          <strong>Microsoft.FSharp.Core名前空間</strong> を定義したい場合には、上記のように順番通り <strong class="keyword">namespace</strong> を定義していきます。<br>
-          ただ、一般的には以下のように <strong>ドット</strong> で繋いで一行で定義します。<br>
+          <strong>Microsoft.FSharp.Core名前空間</strong>を定義したい場合には、上記のように順番通り<strong class="keyword">namespace</strong>を定義していきます。<br>
+          ただ、一般的には以下のように「<strong>ドット</strong>」で繋いで一行で定義します。<br>
 
           <div class="code"><pre class="prettyprint linenums lang-ml">
 namespace Microsoft.FSharp.Core
@@ -160,7 +164,7 @@ module Sample =
         0</pre></div>
           <br>
 
-          <strong class="keyword">namespace</strong> を複数行にすることで入れ子にできることは上記の例でわかったと思います。<br>
+          <strong class="keyword">namespace</strong>を複数行にすることで入れ子にできることは上記の例でわかったと思います。<br>
           この性質を利用することで以下のようなことができます。<br>
 
           <div class="code"><pre class="prettyprint linenums lang-ml">
@@ -184,8 +188,8 @@ module Sample =
         printfn "Hello world!!"
         0</pre></div>
           
-          このように同一ファイル内で入れ子になっている <strong>名前空間</strong> を利用することが可能となっています。<br>
-          ただし最初の <strong>名前空間</strong> は 最初の<strong class="keyword">module</strong> や <strong class="keyword">type</strong> の宣言よりも前に定義されていなければなりません。<br>
+          このように同一ファイル内で入れ子になっている<strong>名前空間</strong>を利用することが可能となっています。<br>
+          ただし最初の<strong>名前空間</strong>は、最初の<strong class="keyword">module</strong>や<strong class="keyword">type</strong>の宣言よりも前に定義されていなければなりません。<br>
           このルールがあるため、以下のコードはエラーとなります。<br>
 
           <div class="code"><pre class="prettyprint linenums lang-ml">
@@ -209,8 +213,8 @@ module Sample =
         0</pre></div>
           <br>
 
-          <strong>名前空間</strong> は <strong>アプリケーション名</strong> や <strong>組織名</strong> などで始まることが多いですが、<strong class="keyword">特に決まったルールはありません</strong>。<br>
-          しかし、あまり細かく <strong>名前空間</strong> を分けすぎると利用者側も作成者側もわかりにくくなってしまうため、自分が適切だと思う粒度感で <strong>名前空間</strong> を定義するようにしましょう。<br>
+          <strong>名前空間</strong>は<strong>アプリケーション名</strong>や<strong>組織名</strong>などで始まることが多いですが、<strong class="keyword">特に決まったルールはありません</strong>。<br>
+          しかし、あまり細かく<strong>名前空間</strong>を分けすぎると利用者側も作成者側もわかりにくくなってしまうため、自分が適切だと思う粒度感で<strong>名前空間</strong>を定義するようにしましょう。<br>
 
           <br>
         </article>
@@ -218,6 +222,6 @@ module Sample =
         <br>
     </section>
 
-    <footer>更新日: 2020/05/13</footer>
+    <footer>投稿日: 2020/05/13, 更新日: 2020/05/13</footer>
   </body>
 </html>
