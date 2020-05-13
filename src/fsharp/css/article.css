@@ -14,7 +14,7 @@ body {
 }
 
 a {
-  color: rgb(32, 32, 32) !important;
+  color: rgb(32, 32, 32);
   text-decoration-line: none !important;
 }
 
@@ -85,6 +85,10 @@ body {
   font-size: 1.0em;
 }
 
+.normal {
+  color: rgb(240, 240, 240) !important;
+}
+
 /* セクション */
 section .content_main {
   grid-row: 2 / 3;
@@ -110,6 +114,11 @@ article {
 }
 
 .code pre {
+  white-space: -moz-pre-wrap; 
+  white-space: -pre-wrap; 
+  white-space: -o-pre-wrap;
+  white-space: pre-wrap; 
+  word-wrap: break-word; 
   margin: 0px !important;
 }
 

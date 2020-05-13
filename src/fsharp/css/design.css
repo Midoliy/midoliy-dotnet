@@ -14,13 +14,22 @@ body {
 }
 
 a {
-  color: rgb(32, 32, 32) !important;
-  text-decoration-line: none !important;
+  color: rgb(32, 32, 32);
+  text-decoration-line: none;
 }
 
 a:hover {
   filter: drop-shadow(0px 0px 6px rgb(0, 183, 255));
-  text-decoration-line: none !important;
+  text-decoration-line: none;
+}
+
+a.coming-soon {
+  text-decoration-line: line-through;
+}
+
+a.coming-soon:hover {
+  filter: drop-shadow(0px 0px 6px rgb(255, 60, 0));
+  text-decoration-line: line-through;
 }
 
 h1 {
@@ -77,6 +86,10 @@ header .title_main {
 
 header .sub_title {
   margin: 8px 16px 16px 24px;
+}
+
+.normal {
+  color: rgb(240, 240, 240) !important;
 }
 
 /* ボディ */
