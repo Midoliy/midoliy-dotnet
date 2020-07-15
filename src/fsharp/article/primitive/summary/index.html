@@ -109,12 +109,93 @@
           F# 以外の .NET 言語の経験がある方は <strong>プリミティブ型</strong> を改めて理解する必要はありませんが F# 固有の型については使い方や特性を新たに理解しなければなりません。<br>
           以下は F# がもつ基本的な型の概要一覧です。<br>
 
-
-
-          「<strong>プログラミングF# / 非公式日本語リファレンスサイト</strong>」では、<strong>F#</strong> についての解説やTIPSを中心にサンプルを交えつつ掲載していきます。<br>
-          <br>
-          可能なかぎり誤った情報を記載しないように、記事の掲載をしていきたいと思いますが、万が一、 誤った情報を発見された方がいらっしゃいましたら、ご連絡をいただければ幸いです。<br>
-          <b>(e-mail: com.midoliy@gmail.com)</b><br>
+          <table>
+            <thead>
+                <tr>
+                    <th>F# の型</th>
+                    <th>構文</th>
+                    <th>例</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>プリミティブ型<br>(組み込み型)</td>
+                    <td>型名</td>
+                    <td><strong>unit</strong><br><strong>int</strong><br><strong>float</strong><br><strong>string</strong>g</td>
+                </tr>
+                <tr>
+                    <td>集計型<br>(record/class/struct など)</td>
+                    <td>型名</td>
+                    <td><strong>DateTime</strong><br><strong>Color</strong><br><strong>Stream</strong></td>
+                </tr>
+                <tr>
+                    <td>型略称</td>
+                    <td>型略称名</td>
+                    <td><strong>bigint</strong></td>
+                </tr>
+                <tr>
+                    <td>完全修飾型</td>
+                    <td>namespace.型名<br>&nbsp;or<br>module.型名<br>&nbsp;or<br>namespace.module.型名</td>
+                    <td><strong>System.IO.StreamWrite</strong><br><strong>System.Drawing.Bitmap</strong></td>
+                </tr>
+                <tr>
+                    <td>配列<br>(array)</td>
+                    <td>型名[]<br>&nbsp;or<br>array&lt;型名&gt;<br>&nbsp;or<br>型名 array</td>
+                    <td><strong>int[]</strong><br><strong>array&lt;int&gt;</strong><br><strong>int array</strong></td>
+                </tr>
+                <tr>
+                    <td>2次元配列</td>
+                    <td>型名[,]</td>
+                    <td><strong>int[,]</strong><br><strong>string[,]</strong></td>
+                </tr>
+                <tr>
+                    <td>3次元配列</td>
+                    <td>型名[,,]</td>
+                    <td><strong>int[,,]</strong><br><strong>string[,,]</strong></td>
+                </tr>
+                <tr>
+                    <td>タプル型<br>(tuple)</td>
+                    <td>型名1 * 型名2 ( * 型名3 ･･･)</td>
+                    <td><strong>int * char</strong><br><strong>float * float * string</strong><br><strong>string * int * float * float</strong></td>
+                </tr>
+                <tr>
+                    <td>ジェネリック型</td>
+                    <td>'型パラメータ ジェネリック型名<br>&nbsp;or<br>ジェネリック型名&lt;'型パラメータリスト&gt;</td>
+                    <td><strong>'a list</strong><br><strong>list&lt;'a&gt;</strong><br><strong>Dictionary&lt;'key, 'value&gt;</strong></td>
+                </tr>
+                <tr>
+                    <td>構築型<br>(特定の型引数を持つジェネリック型)</td>
+                    <td>型引数 ジェネリック型名<br>&nbsp;or<br>ジェネリック型名&lt;型引数リスト&gt;</td>
+                    <td><strong>int option</strong><br><strong>list&lt;string&gt;</strong><br><strong>ref&lt;int&gt;</strong><br><strong>Dictionary&lt;int, string&gt;</strong></td>
+                </tr>
+                <tr>
+                    <td>1つの引数を持つ関数型</td>
+                    <td>引数の型 -&gt; 戻り値の型</td>
+                    <td><strong>int -&gt; string</strong><br>&nbsp;int型を受け取って, string型を返す関数<br><strong>unit -&gt; float</strong><br>&nbsp;unit型を受け取って, float型を返す関数</td>
+                </tr>
+                <tr>
+                    <td>複数の引数を持つ関数型</td>
+                    <td>引数の型1 -&gt; 引数の型2 -&gt; ... -&gt; 引数の型N -&gt; 戻り値の型</td>
+                    <td><strong>int -&gt; float -&gt; string<br>&nbsp;int型とfloat型を受け取って, string型を返す関数</strong></td>
+                </tr>
+                <tr>
+                    <td>引数としての公開関数</td>
+                    <td>(関数型)</td>
+                    <td><strong>('a -gt; 'b) -&gt; 'a list -&gt; 'b list</strong></td>
+                </tr>
+                <tr>
+                    <td>デリゲート型<br>(delegate)</td>
+                    <td>delegate of 関数型</td>
+                    <td><strong>delegate of unit -&gt; int</strong></td>
+                </tr>
+                <tr>
+                    <td>フレキシブル型<br>(flexible)</td>
+                    <td>#型名</td>
+                    <td><strong>#seq&lt;int&gt;</strong><br><strong>#System.Windows.Forms.Control</strong></td>
+                </tr>
+            </tbody>
+          </table>
+          
           <br>
         </article>
 
